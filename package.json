@@ -1,0 +1,11 @@
+{
+  "name": "aternos-bot",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "mineflayer": "^4.7.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
