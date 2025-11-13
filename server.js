@@ -1,8 +1,8 @@
 const mineflayer = require('mineflayer');
 
 const bot = mineflayer.createBot({
-  host: 'yourname.aternos.me', // ഇവിടെ നിന്റെ Aternos IP ഇടുക
-  port: 25565,
+  host: 'Shsmb.aternos.me:', // ഇവിടെ നിന്റെ Aternos IP ഇടുക
+  port: 63328,
   username: 'KeepAliveBot' // ബോട്ട് നാമം
 });
 
