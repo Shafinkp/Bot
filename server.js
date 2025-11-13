@@ -1,11 +1,22 @@
-const mineflayer = require('mineflayer');
+const mineflayer = require('mineflayer')
 
 const bot = mineflayer.createBot({
-  host: 'Shsmb.aternos.me:', // ഇവിടെ നിന്റെ Aternos IP ഇടുക
-  port: 63328,
-  username: 'KeepAliveBot' // ബോട്ട് നാമം
-});
+  host: 'shsmb.aternos.me', // Server address (':' ഇല്ലാതെ)
+  port: 63328,               // Port നമ്പർ
+  username: 'Bot123'         // Bot name (Minecraft username)
+})
 
 bot.on('spawn', () => {
-  console.log('🤖 Bot connected to Aternos server!');
-});
+  console.log('✅ Bot joined the server successfully!')
+})
+
+bot.on('error', (err) => {
+  console.log('❌ Error:', err)
+})
+
+bot.on('end', () => {
+  console.log('🔁 Bot disconnected. Reconnecting in 10s...')
+  setTimeout(() => {
+    process.exit(1) // Render will auto restart
+  }, 10000)
+})
